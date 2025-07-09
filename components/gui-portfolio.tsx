@@ -195,15 +195,35 @@ export function GuiPortfolio() {
   const sections = {
     about: (
       <div className="space-y-8">
-        <div>
-          <h1 className="text-3xl font-light text-gray-900 dark:text-white mb-2">{data.profile.name}</h1>
-          <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">{data.profile.title}</p>
-          <div className="text-sm text-gray-500 dark:text-gray-500 space-y-1">
-            <p>📍 {data.profile.location}</p>
-            <p>
-              🎓 {data.profile.school} • Expected Graduation: {data.profile.graduation}
-            </p>
-            <p>💼 {data.profile.role}</p>
+        <div className="flex items-start gap-6">
+          {/* Profile Picture */}
+          <div className="w-24 h-24 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center overflow-hidden border-4 border-gray-200 dark:border-gray-700 flex-shrink-0">
+            <img 
+              src="/photo.jpg" 
+              alt="Abhishek Sharma" 
+              className="w-full h-full object-cover"
+              style={{ objectPosition: 'center 25%' }}
+              onError={(e) => {
+                // Fallback to initials if image doesn't load
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+                target.nextElementSibling?.classList.remove('hidden');
+              }}
+            />
+            <span className="text-white font-bold text-2xl hidden">AS</span>
+          </div>
+          
+          {/* Profile Info */}
+          <div className="flex-1">
+            <h1 className="text-3xl font-light text-gray-900 dark:text-white mb-2">{data.profile.name}</h1>
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">{data.profile.title}</p>
+            <div className="text-sm text-gray-500 dark:text-gray-500 space-y-1">
+              <p>📍 {data.profile.location}</p>
+              <p>
+                🎓 {data.profile.school} • Expected Graduation: {data.profile.graduation}
+              </p>
+              <p>💼 {data.profile.role}</p>
+            </div>
           </div>
         </div>
         <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">

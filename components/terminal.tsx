@@ -613,9 +613,9 @@ export function Terminal() {
   const promptInfo = getPromptInfo()
 
   return (
-    <div className="bg-gray-900 border-2 border-yellow-400 rounded-lg shadow-2xl overflow-hidden backdrop-blur-sm bg-opacity-95 shadow-yellow-400/20">
+    <div className="bg-gray-900/70 border-2 border-yellow-400 rounded-lg shadow-2xl overflow-hidden backdrop-blur-md bg-opacity-70 shadow-yellow-400/20">
       {/* Cyberpunk Header */}
-      <div className="bg-gradient-to-r from-gray-800 to-gray-900 px-4 py-3 flex items-center justify-between border-b-2 border-yellow-400">
+      <div className="bg-gradient-to-r from-gray-800/80 to-gray-900/80 px-4 py-3 flex items-center justify-between border-b-2 border-yellow-400 backdrop-blur-sm">
         <div className="flex items-center space-x-3">
           <div className="flex space-x-2">
             <div className="w-3 h-3 bg-red-500 rounded-sm"></div>
@@ -642,7 +642,7 @@ export function Terminal() {
           </div>
           <button
             onClick={() => setIsMaximized(!isMaximized)}
-            className="text-yellow-400 hover:text-white transition-colors p-1 rounded hover:bg-gray-700"
+            className="text-yellow-400 hover:text-white transition-colors p-1 rounded hover:bg-gray-700/50"
           >
             {isMaximized ? <Minimize2 size={14} /> : <Maximize2 size={14} />}
           </button>
@@ -652,7 +652,7 @@ export function Terminal() {
       {/* Terminal Content */}
       <div
         ref={terminalRef}
-        className={`${isMaximized ? "h-[600px]" : "h-96"} overflow-y-auto bg-gray-900 text-yellow-400 font-mono text-sm p-4 scrollbar-thin scrollbar-thumb-yellow-400 scrollbar-track-gray-800`}
+        className={`${isMaximized ? "h-[600px]" : "h-96"} overflow-y-auto bg-gray-900/50 text-yellow-400 font-mono text-sm p-4 scrollbar-thin scrollbar-thumb-yellow-400 scrollbar-track-gray-800/50 backdrop-blur-sm`}
         onClick={() => inputRef.current?.focus()}
       >
         {history.map((command, index) => (
@@ -686,7 +686,7 @@ export function Terminal() {
             )}
             <div className="whitespace-pre-wrap text-gray-200 leading-relaxed">
               {command.output.map((line, lineIndex) => (
-                <div key={lineIndex} className="hover:bg-gray-800 hover:bg-opacity-50 px-1 rounded transition-colors">
+                <div key={lineIndex} className="hover:bg-gray-800/30 hover:bg-opacity-50 px-1 rounded transition-colors">
                   {line}
                 </div>
               ))}
@@ -730,7 +730,7 @@ export function Terminal() {
       </div>
 
       {/* Cyberpunk Status Bar */}
-      <div className="bg-gradient-to-r from-gray-800 to-gray-900 px-4 py-2 border-t-2 border-yellow-400 flex items-center justify-between text-xs font-mono">
+      <div className="bg-gradient-to-r from-gray-800/80 to-gray-900/80 px-4 py-2 border-t-2 border-yellow-400 flex items-center justify-between text-xs font-mono backdrop-blur-sm">
         <div className="flex items-center space-x-4 text-gray-300">
           <span className="text-cyan-400">CMD: {commandHistory.length}</span>
           <span className="text-green-400">SHELL: zsh</span>
