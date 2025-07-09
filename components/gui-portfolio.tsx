@@ -202,7 +202,7 @@ export function GuiPortfolio() {
               src="/photo.jpg" 
               alt="Abhishek Sharma" 
               className="w-full h-full object-cover"
-              style={{ objectPosition: 'center 25%' }}
+              style={{ objectPosition: 'center 65%', transform: 'scale(0.99)'}}
               onError={(e) => {
                 // Fallback to initials if image doesn't load
                 const target = e.target as HTMLImageElement;

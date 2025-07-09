@@ -40,10 +40,10 @@ export default function Portfolio() {
                 <div className="w-12 h-12 rounded-full bg-gradient-to-r from-green-400 to-blue-500 flex items-center justify-center overflow-hidden border-2 border-white/20">
                   {/* Replace this with your actual image */}
                   <img 
-                    src="/photo.jpg" 
+                    src="/spence.jpg" 
                     alt="Abhishek Sharma" 
                     className="w-full h-full object-cover"
-                    style={{ objectPosition: 'center 25%' }}
+                    style={{ objectPosition: 'center 65%' }}
                     onError={(e) => {
                       // Fallback to initials if image doesn't load
                       const target = e.target as HTMLImageElement;
