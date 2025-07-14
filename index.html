@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Sharma</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>Abhishek Sharma</h1>
+                    <div class="subtitle">Computer Science Student & Developer</div>
+                </div>
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <div class="terminal-btn close"></div>
+                            <div class="terminal-btn minimize"></div>
+                            <div class="terminal-btn maximize"></div>
+                        </div>
+                        <div class="terminal-title">abhishek@dev: ~/projects</div>
+                    </div>
+                    <div class="terminal-content">
+                        <div class="terminal-line">
+                            <span class="prompt">➜ </span><span style="color: #58a6ff;">~</span>
+                            <span class="command"> whoami</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output">abhishek</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">➜ </span><span style="color: #58a6ff;">~</span>
+                            <span class="command"> cd projects</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">➜ </span><span style="color: #58a6ff;">projects</span> <span style="color: #7ee787;">git:(main)</span>
+                            <span class="command"> ls</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output">neural_networks/  self_driving_car/  physics_engine/</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">➜ </span><span style="color: #58a6ff;">projects</span> <span style="color: #7ee787;">git:(main)</span>
+                            <span class="command"> cat status</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output">Building neural networks and AI systems</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output">Currently learning: Rust, Zig</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">➜ </span><span style="color: #58a6ff;">projects</span> <span style="color: #7ee787;">git:(main)</span>
+                            <span class="cursor">█</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('projects')" class="nav-link active">Projects</a></li>
+                <li><a href="#" onclick="showPage('about')" class="nav-link">About</a></li>
+                <li><a href="#" onclick="showPage('contact')" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <!-- Projects Page -->
+            <div id="projects" class="page active">
+                <section>
+                    <h2>Projects</h2>
+                    
+                    <div class="project">
+                        <div class="project-header">
+                            <h3 class="project-title">Self-Driving Car AI Simulation</h3>
+                            <div class="project-links">
+                                <a href="#" target="_blank">Demo</a>
+                                <a href="#" target="_blank">Code</a>
+                            </div>
+                        </div>
+                        <div class="project-tech">JavaScript • Neural Networks • Genetic Algorithms</div>
+                        <div class="project-description">
+                            <ul>
+                                <li>Implemented neural network from scratch that learns to navigate cars through traffic using genetic algorithms</li>
+                                <li>Created collision detection system and sensor arrays using ray casting and polygon intersection algorithms</li>
+                                <li>Built real-time visualization of neural network decision-making process and training evolution</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-header">
+                            <h3 class="project-title">Neural Network from Scratch</h3>
+                            <div class="project-links">
+                                <a href="#" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="project-tech">C++ • Eigen • MNIST Dataset</div>
+                        <div class="project-description">
+                            <ul>
+                                <li>Built customizable neural network with backpropagation for MNIST digit classification achieving 94% accuracy</li>
+                                <li>Implemented gradient descent optimization, regularization techniques, and solved numerical stability issues</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-header">
+                            <h3 class="project-title">EarthQuake Watch Nepal</h3>
+                            <div class="project-links">
+                                <a href="#" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="project-tech">Flask • Python • JavaScript</div>
+                        <div class="project-description">
+                            <ul>
+                                <li>Developed web application to enhance public safety by providing real-time earthquake alerts</li>
+                                <li>Implemented automated data updates and interactive monitoring map</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-header">
+                            <h3 class="project-title">Nogit – Lightweight Version Control System</h3>
+                            <div class="project-links">
+                                <a href="#" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="project-tech">Node.js • JavaScript • File System</div>
+                        <div class="project-description">
+                            <ul>
+                                <li>Developed Git-like version control system with file tracking, hashing, staging, commits, and logging</li>
+                                <li>Implemented SHA-1 hashing for file integrity and structured commit storage</li>
+                                <li>Designed asynchronous CLI tool for efficient version tracking</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-header">
+                            <h3 class="project-title">Verlet Physics Simulation</h3>
+                            <div class="project-links">
+                                <a href="#" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="project-tech">C++ • SFML • Physics Simulation</div>
+                        <div class="project-description">
+                            <ul>
+                                <li>Developed real-time physics simulation using Verlet integration for stable motion updates</li>
+                                <li>Optimized performance using spatial partitioning to reduce collision detection complexity</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-header">
+                            <h3 class="project-title">Customer Support RAG Agent</h3>
+                            <div class="project-links">
+                                <a href="#" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="project-tech">Python • LangFlow • AstraDB • Streamlit</div>
+                        <div class="project-description">
+                            Built AI-driven chatbot using LangFlow API and AstraDB for scalable, real-time user support
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-header">
+                            <h3 class="project-title">Flappy Bird AI</h3>
+                            <div class="project-links">
+                                <a href="#" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="project-tech">Python • Pygame • NEAT</div>
+                        <div class="project-description">
+                            <ul>
+                                <li>Designed AI-powered player using NEAT (NeuroEvolution Algorithm) for adaptive learning</li>
+                                <li>Performed data analysis of AI performance metrics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Technical Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h3>Languages</h3>
+                            <div class="skill-list">C++, Python, JavaScript, Java, SQL, PHP, Golang, Rust, Zig</div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>AI & Machine Learning</h3>
+                            <div class="skill-list">PyTorch, Neural Networks, NEAT, Genetic Algorithms, Computer Vision</div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Frameworks & Libraries</h3>
+                            <div class="skill-list">React, Node.js, Flask, Pandas, SFML, Pygame</div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Developer Tools</h3>
+                            <div class="skill-list">Git, Docker, Kubernetes, CI/CD, GitHub Actions, Jenkins</div>
+                        </div>
+                        <div class="skill-category">
+                            <h3>Cloud & Infrastructure</h3>
+                            <div class="skill-list">AWS, GCP, Terraform, Linux, Firebase</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            
+            <!-- About Page -->
+            <div id="about" class="page">
+                <section>
+                    <h2>About</h2>
+                    <div class="education">
+                        <div class="education-header">
+                            <div>
+                                <div class="degree">Bachelor of Science, Computer Science</div>
+                                <div class="school">Columbia College</div>
+                            </div>
+                            <div class="graduation">Expected December 2025</div>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <h3 class="project-title">Background</h3>
+                        <div class="project-description">
+                            <p>Computer Science student at Columbia College with experience in artificial intelligence, machine learning, and systems programming. I enjoy building projects from scratch to understand how things work at a fundamental level.</p>
+                            <br>
+                            <p>Currently working as a Computer Technician at Columbia College where I've automated deployment scripts and engineered custom hardware solutions. Previously taught coding bootcamps at idTech and worked as a Software Engineering Intern at GR Manpower.</p>
+                            <br>
+                            <p>My interests focus on neural networks, physics simulations, and creating AI systems that can learn and adapt. I'm currently exploring systems programming languages like Rust and Zig while continuing to work on machine learning projects.</p>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-header">
+                            <h3 class="project-title">Resume</h3>
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="btn btn-primary">Download PDF</a>
+                            </div>
+                        </div>
+                        <div class="project-description">
+                            Download my full resume with detailed experience, education, and project information.
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Contact Page -->
+            <div id="contact" class="page">
+                <section>
+                    <h2>Get In Touch</h2>
+                    
+                    <div class="contact-grid">
+                        <div class="contact-card">
+                            <span class="contact-icon">[L]</span>
+                            <div class="contact-title">LinkedIn</div>
+                            <div class="contact-description">Let's connect professionally and discuss opportunities</div>
+                            <a href="#" target="_blank" class="btn">Connect</a>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <span class="contact-icon">{}</span>
+                            <div class="contact-title">GitHub</div>
+                            <div class="contact-description">Check out my code and contribute to open source projects</div>
+                            <a href="#" target="_blank" class="btn">Follow</a>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <span class="contact-icon">@</span>
+                            <div class="contact-title">Email</div>
+                            <div class="contact-description">Send me a message for collaborations or opportunities</div>
+                            <a href="mailto:abhishekshaarma2@gmail.com" class="btn">Email Me</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <h3 style="text-align: center; margin-bottom: 30px; color: #f0f6fc;">Send a Message</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="contactName">Name</label>
+                                <input type="text" id="contactName" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email</label>
+                                <input type="email" id="contactEmail" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactSubject">Subject</label>
+                                <input type="text" id="contactSubject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contactMessage">Message</label>
+                                <textarea id="contactMessage" name="message" required></textarea>
+                            </div>
+                            <div class="form-submit">
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </div>
+                        </form>
+                        <div id="contactFormMessage" style="text-align: center; margin-top: 20px; display: none;"></div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Blog Modal -->
+        <div id="blogModal" class="blog-modal">
+            <div class="blog-modal-content">
+                <button class="blog-close" onclick="closeBlogPost()">×</button>
+                <div id="blogContent" class="blog-content">
+                    <!-- Blog content will be inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Preview Modal -->
+        <div id="previewModal" class="preview-modal">
+            <div class="preview-content">
+                <button class="blog-close" onclick="closePreview()">×</button>
+                <div id="previewContent" class="blog-content">
+                    <!-- Preview content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
