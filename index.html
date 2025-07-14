@@ -14,47 +14,131 @@
                     <h1>Abhishek Sharma</h1>
                     <div class="subtitle">Computer Science Student & Developer</div>
                 </div>
-                <div class="terminal">
-                    <div class="terminal-header">
-                        <div class="terminal-buttons">
-                            <div class="terminal-btn close"></div>
-                            <div class="terminal-btn minimize"></div>
-                            <div class="terminal-btn maximize"></div>
+                <div class="turing-machine">
+                    <div class="turing-header">
+                        <div class="turing-title">Turing Machine Simulator</div>
+                        <div class="turing-status">
+                            <span class="status-dot active"></span>
+                            <span class="status-text">COMPUTING</span>
                         </div>
-                        <div class="terminal-title">abhishek@dev: ~/projects</div>
                     </div>
-                    <div class="terminal-content">
-                        <div class="terminal-line">
-                            <span class="prompt">➜ </span><span style="color: #58a6ff;">~</span>
-                            <span class="command"> whoami</span>
+                    <div class="turing-content">
+                        <!-- State Display -->
+                        <div class="state-display">
+                            <div class="current-state">
+                                <span class="state-label">Current State:</span>
+                                <span class="state-value" id="currentState">q0</span>
+                            </div>
+                            <div class="state-transition">
+                                <span class="transition-label">Transition:</span>
+                                <span class="transition-value" id="transition">δ(q0,1) = (q1,1,R)</span>
+                            </div>
                         </div>
-                        <div class="terminal-line">
-                            <span class="output">abhishek</span>
+                        
+                        <!-- Tape -->
+                        <div class="tape-container">
+                            <div class="tape" id="tape">
+                                <div class="tape-cell" data-position="-3">0</div>
+                                <div class="tape-cell" data-position="-2">1</div>
+                                <div class="tape-cell" data-position="-1">0</div>
+                                <div class="tape-cell active" data-position="0">1</div>
+                                <div class="tape-cell" data-position="1">0</div>
+                                <div class="tape-cell" data-position="2">1</div>
+                                <div class="tape-cell" data-position="3">0</div>
+                                <div class="tape-cell" data-position="4">1</div>
+                                <div class="tape-cell" data-position="5">0</div>
+                                <div class="tape-cell" data-position="6">1</div>
+                                <div class="tape-cell" data-position="7">0</div>
+                                <div class="tape-cell" data-position="8">1</div>
+                                <div class="tape-cell" data-position="9">0</div>
+                                <div class="tape-cell" data-position="10">1</div>
+                                <div class="tape-cell" data-position="11">0</div>
+                                <div class="tape-cell" data-position="12">1</div>
+                                <div class="tape-cell" data-position="13">0</div>
+                                <div class="tape-cell" data-position="14">1</div>
+                                <div class="tape-cell" data-position="15">0</div>
+                            </div>
+                            <div class="read-head">▼</div>
                         </div>
-                        <div class="terminal-line">
-                            <span class="prompt">➜ </span><span style="color: #58a6ff;">~</span>
-                            <span class="command"> cd projects</span>
+                        
+                        <!-- Control Panel -->
+                        <div class="control-panel">
+                            <div class="control-row">
+                                <div class="control-item">
+                                    <span class="control-label">Steps:</span>
+                                    <span class="control-value" id="stepCount">0</span>
+                                </div>
+                                <div class="control-item">
+                                    <span class="control-label">Position:</span>
+                                    <span class="control-value" id="headPosition">0</span>
+                                </div>
+                            </div>
+                            <div class="control-row">
+                                <div class="control-item">
+                                    <span class="control-label">Direction:</span>
+                                    <span class="control-value" id="direction">R</span>
+                                </div>
+                                <div class="control-item">
+                                    <span class="control-label">Symbol:</span>
+                                    <span class="control-value" id="currentSymbol">1</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="terminal-line">
-                            <span class="prompt">➜ </span><span style="color: #58a6ff;">projects</span> <span style="color: #7ee787;">git:(main)</span>
-                            <span class="command"> ls</span>
-                        </div>
-                        <div class="terminal-line">
-                            <span class="output">neural_networks/  self_driving_car/  physics_engine/</span>
-                        </div>
-                        <div class="terminal-line">
-                            <span class="prompt">➜ </span><span style="color: #58a6ff;">projects</span> <span style="color: #7ee787;">git:(main)</span>
-                            <span class="command"> cat status</span>
-                        </div>
-                        <div class="terminal-line">
-                            <span class="output">Building neural networks and AI systems</span>
-                        </div>
-                        <div class="terminal-line">
-                            <span class="output">Currently learning: Rust, Zig</span>
-                        </div>
-                        <div class="terminal-line">
-                            <span class="prompt">➜ </span><span style="color: #58a6ff;">projects</span> <span style="color: #7ee787;">git:(main)</span>
-                            <span class="cursor">█</span>
+                        
+                        <!-- State Table -->
+                        <div class="state-table">
+                            <div class="table-header">Transition Function δ</div>
+                            <div class="table-content">
+                                <div class="table-row header">
+                                    <div class="table-cell">State</div>
+                                    <div class="table-cell">Read</div>
+                                    <div class="table-cell">Write</div>
+                                    <div class="table-cell">Move</div>
+                                    <div class="table-cell">Next</div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="table-cell">q0</div>
+                                    <div class="table-cell">0</div>
+                                    <div class="table-cell">1</div>
+                                    <div class="table-cell">R</div>
+                                    <div class="table-cell">q1</div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="table-cell">q0</div>
+                                    <div class="table-cell">1</div>
+                                    <div class="table-cell">0</div>
+                                    <div class="table-cell">R</div>
+                                    <div class="table-cell">q1</div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="table-cell">q1</div>
+                                    <div class="table-cell">0</div>
+                                    <div class="table-cell">0</div>
+                                    <div class="table-cell">L</div>
+                                    <div class="table-cell">q2</div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="table-cell">q1</div>
+                                    <div class="table-cell">1</div>
+                                    <div class="table-cell">1</div>
+                                    <div class="table-cell">L</div>
+                                    <div class="table-cell">q2</div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="table-cell">q2</div>
+                                    <div class="table-cell">0</div>
+                                    <div class="table-cell">1</div>
+                                    <div class="table-cell">R</div>
+                                    <div class="table-cell">q0</div>
+                                </div>
+                                <div class="table-row">
+                                    <div class="table-cell">q2</div>
+                                    <div class="table-cell">1</div>
+                                    <div class="table-cell">0</div>
+                                    <div class="table-cell">R</div>
+                                    <div class="table-cell">q0</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

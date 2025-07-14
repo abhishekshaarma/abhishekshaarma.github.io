@@ -551,3 +551,147 @@ function initializeApp() {
 
 // Initialize when page loads
 window.addEventListener('load', initializeApp);
+
+// Turing Machine Simulation
+class TuringMachine {
+    constructor() {
+        this.currentState = 'q0';
+        this.headPosition = 0;
+        this.stepCount = 0;
+        this.tape = [];
+        this.isRunning = false;
+        this.interval = null;
+        
+        // Initialize tape with alternating 0s and 1s
+        for (let i = -10; i <= 20; i++) {
+            this.tape[i] = Math.abs(i) % 2;
+        }
+        
+        // Transition function δ: (state, symbol) → (newState, writeSymbol, direction)
+        this.transitions = {
+            'q0': {
+                '0': { state: 'q1', write: '1', move: 'R' },
+                '1': { state: 'q1', write: '0', move: 'R' }
+            },
+            'q1': {
+                '0': { state: 'q2', write: '0', move: 'L' },
+                '1': { state: 'q2', write: '1', move: 'L' }
+            },
+            'q2': {
+                '0': { state: 'q0', write: '1', move: 'R' },
+                '1': { state: 'q0', write: '0', move: 'R' }
+            }
+        };
+        
+        this.updateDisplay();
+        this.startSimulation();
+    }
+    
+    step() {
+        const currentSymbol = this.tape[this.headPosition];
+        const transition = this.transitions[this.currentState][currentSymbol];
+        
+        if (!transition) {
+            this.stop();
+            return;
+        }
+        
+        // Update tape
+        this.tape[this.headPosition] = transition.write;
+        
+        // Update state
+        this.currentState = transition.state;
+        
+        // Move head
+        if (transition.move === 'R') {
+            this.headPosition++;
+        } else {
+            this.headPosition--;
+        }
+        
+        this.stepCount++;
+        this.updateDisplay();
+        this.updateTapeVisual();
+    }
+    
+    updateDisplay() {
+        document.getElementById('currentState').textContent = this.currentState;
+        document.getElementById('stepCount').textContent = this.stepCount;
+        document.getElementById('headPosition').textContent = this.headPosition;
+        document.getElementById('currentSymbol').textContent = this.tape[this.headPosition] || '0';
+        
+        const currentSymbol = this.tape[this.headPosition] || '0';
+        const transition = this.transitions[this.currentState][currentSymbol];
+        if (transition) {
+            document.getElementById('transition').textContent = 
+                `δ(${this.currentState},${currentSymbol}) = (${transition.state},${transition.write},${transition.move})`;
+            document.getElementById('direction').textContent = transition.move;
+        }
+    }
+    
+    updateTapeVisual() {
+        const tapeElement = document.getElementById('tape');
+        const cells = tapeElement.querySelectorAll('.tape-cell');
+        
+        cells.forEach((cell, index) => {
+            const position = parseInt(cell.dataset.position);
+            const symbol = this.tape[position] || '0';
+            
+            cell.textContent = symbol;
+            cell.classList.remove('active');
+            
+            if (position === this.headPosition) {
+                cell.classList.add('active');
+            }
+        });
+        
+        // Animate tape movement
+        const offset = (this.headPosition - 7) * -32; // 30px cell width + 2px gap
+        tapeElement.style.transform = `translateX(${offset}px)`;
+    }
+    
+    startSimulation() {
+        if (this.isRunning) return;
+        
+        this.isRunning = true;
+        this.interval = setInterval(() => {
+            this.step();
+        }, 1000); // 1 second per step
+    }
+    
+    stop() {
+        this.isRunning = false;
+        if (this.interval) {
+            clearInterval(this.interval);
+            this.interval = null;
+        }
+    }
+}
+
+// Initialize Turing Machine when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Turing Machine
+    const turingMachine = new TuringMachine();
+    
+    // Existing navigation code
+    function showPage(pageId) {
+        // Hide all pages
+        document.querySelectorAll('.page').forEach(page => {
+            page.classList.remove('active');
+        });
+        
+        // Remove active class from all nav links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.classList.remove('active');
+        });
+        
+        // Show selected page
+        document.getElementById(pageId).classList.add('active');
+        
+        // Add active class to clicked nav link
+        event.target.classList.add('active');
+    }
+    
+    // Make showPage function globally available
+    window.showPage = showPage;
+});
