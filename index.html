@@ -8,21 +8,22 @@
 </head>
 <body>
     <div class="container">
+        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">
+            <span id="theme-icon">🌙</span>
+        </button>
+
         <header>
             <div class="header-content">
-                <div class="header-text">
-                    <h1>Abhishek Sharma</h1>
-                    <div class="subtitle">Computer Science Student & Developer</div>
-                </div>
-            </div> 
-    </div>
+                <h1>ABHISHEK SHARMA</h1>
+                <div class="subtitle">COMPUTER SCIENCE STUDENT & DEVELOPER</div>
+            </div>
         </header>
 
         <nav>
             <ul>
-                <li><a href="#" onclick="showPage('projects')" class="nav-link active">Projects</a></li>
-                <li><a href="#" onclick="showPage('about')" class="nav-link">About</a></li>
-                <li><a href="#" onclick="showPage('contact')" class="nav-link">Contact</a></li>
+                <li><a href="#" onclick="showPage('projects')" class="nav-link active">PROJECTS</a></li>
+                <li><a href="#" onclick="showPage('about')" class="nav-link">ABOUT</a></li>
+                <li><a href="#" onclick="showPage('contact')" class="nav-link">CONTACT</a></li>
             </ul>
         </nav>
 
@@ -34,10 +35,60 @@
                     
                     <div class="project">
                         <div class="project-header">
+                            <h3 class="project-title">Prediction Market Trading Platform</h3>
+                            <div class="project-links">
+                                <a href="#" target="_blank">DEMO</a>
+                                <a href="#" target="_blank">CODE</a>
+                            </div>
+                        </div>
+                        <div class="project-tech">Flask • Python • C++ • Supabase • PostgreSQL • Vercel</div>
+                        <div class="project-description">
+                            <ul>
+                                <li>Built serverless Flask web application for trading in prediction markets with user authentication and real-time order matching</li>
+                                <li>Developed high-performance C++ order matching engine with Python bindings for fast trade execution</li>
+                                <li>Implemented complete trading system with user balances, positions tracking, and order book visualization</li>
+                                <li>Integrated Supabase for authentication and PostgreSQL database management with admin market creation tools</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-header">
+                            <h3 class="project-title">High-Performance C++ Order Book Engine</h3>
+                            <div class="project-links">
+                                <a href="#" target="_blank">GITHUB</a>
+                            </div>
+                        </div>
+                        <div class="project-tech">C++ • STL • Data Structures • Performance Optimization</div>
+                        <div class="project-description">
+                            <ul>
+                                <li>Engineered low-latency order book system using advanced C++ with custom data structures for financial trading</li>
+                                <li>Optimized memory management and data access patterns for microsecond-level trade execution performance</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-header">
+                            <h3 class="project-title">LSTM Stock Prediction Engine</h3>
+                            <div class="project-links">
+                                <a href="#" target="_blank">GITHUB</a>
+                            </div>
+                        </div>
+                        <div class="project-tech">C++ • LSTM • Machine Learning • CMake</div>
+                        <div class="project-description">
+                            <ul>
+                                <li>Developed C++ implementation of LSTM neural networks for stock price prediction and financial time series analysis</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project-header">
                             <h3 class="project-title">Self-Driving Car AI Simulation</h3>
                             <div class="project-links">
-                                <a href="#" target="_blank">Demo</a>
-                                <a href="#" target="_blank">Code</a>
+                                <a href="#" target="_blank">DEMO</a>
+                                <a href="#" target="_blank">CODE</a>
                             </div>
                         </div>
                         <div class="project-tech">JavaScript • Neural Networks • Genetic Algorithms</div>
@@ -54,7 +105,7 @@
                         <div class="project-header">
                             <h3 class="project-title">Neural Network from Scratch</h3>
                             <div class="project-links">
-                                <a href="#" target="_blank">GitHub</a>
+                                <a href="#" target="_blank">GITHUB</a>
                             </div>
                         </div>
                         <div class="project-tech">C++ • Eigen • MNIST Dataset</div>
@@ -70,7 +121,7 @@
                         <div class="project-header">
                             <h3 class="project-title">EarthQuake Watch Nepal</h3>
                             <div class="project-links">
-                                <a href="#" target="_blank">GitHub</a>
+                                <a href="#" target="_blank">GITHUB</a>
                             </div>
                         </div>
                         <div class="project-tech">Flask • Python • JavaScript</div>
@@ -86,7 +137,7 @@
                         <div class="project-header">
                             <h3 class="project-title">Nogit – Lightweight Version Control System</h3>
                             <div class="project-links">
-                                <a href="#" target="_blank">GitHub</a>
+                                <a href="#" target="_blank">GITHUB</a>
                             </div>
                         </div>
                         <div class="project-tech">Node.js • JavaScript • File System</div>
@@ -103,7 +154,7 @@
                         <div class="project-header">
                             <h3 class="project-title">Verlet Physics Simulation</h3>
                             <div class="project-links">
-                                <a href="#" target="_blank">GitHub</a>
+                                <a href="#" target="_blank">GITHUB</a>
                             </div>
                         </div>
                         <div class="project-tech">C++ • SFML • Physics Simulation</div>
@@ -119,7 +170,7 @@
                         <div class="project-header">
                             <h3 class="project-title">Customer Support RAG Agent</h3>
                             <div class="project-links">
-                                <a href="#" target="_blank">GitHub</a>
+                                <a href="#" target="_blank">GITHUB</a>
                             </div>
                         </div>
                         <div class="project-tech">Python • LangFlow • AstraDB • Streamlit</div>
@@ -132,7 +183,7 @@
                         <div class="project-header">
                             <h3 class="project-title">Flappy Bird AI</h3>
                             <div class="project-links">
-                                <a href="#" target="_blank">GitHub</a>
+                                <a href="#" target="_blank">GITHUB</a>
                             </div>
                         </div>
                         <div class="project-tech">Python • Pygame • NEAT</div>
@@ -150,29 +201,28 @@
                     <div class="skills-grid">
                         <div class="skill-category">
                             <h3>Languages</h3>
-                            <div class="skill-list">C++, Python, JavaScript, Java, SQL, PHP, Golang, Rust, Zig</div>
+                            <div class="skill-list">C++, Python, JavaScript, SQL, Rust</div>
                         </div>
                         <div class="skill-category">
                             <h3>AI & Machine Learning</h3>
-                            <div class="skill-list">PyTorch, Neural Networks, NEAT, Genetic Algorithms, Computer Vision</div>
+                            <div class="skill-list">PyTorch, Keras, Tensorflow</div>
                         </div>
                         <div class="skill-category">
                             <h3>Frameworks & Libraries</h3>
-                            <div class="skill-list">React, Node.js, Flask, Pandas, SFML, Pygame</div>
+                            <div class="skill-list">React, Node.js, Flask</div>
                         </div>
                         <div class="skill-category">
                             <h3>Developer Tools</h3>
-                            <div class="skill-list">Git, Docker, Kubernetes, CI/CD, GitHub Actions, Jenkins</div>
+                            <div class="skill-list">Git, Docker, Kubernetes</div>
                         </div>
                         <div class="skill-category">
                             <h3>Cloud & Infrastructure</h3>
-                            <div class="skill-list">AWS, GCP, Terraform, Linux, Firebase</div>
+                            <div class="skill-list">AWS, Vercel, Supabase</div>
                         </div>
                     </div>
                 </section>
             </div>
 
-            
             <!-- About Page -->
             <div id="about" class="page">
                 <section>
@@ -190,11 +240,8 @@
                     <div class="project">
                         <h3 class="project-title">Background</h3>
                         <div class="project-description">
-                            <p>Computer Science student at Columbia College with experience in artificial intelligence, machine learning, and systems programming. I enjoy building projects from scratch to understand how things work at a fundamental level.</p>
-                            <br>
-                            <p>Currently working as a Computer Technician at Columbia College where I've automated deployment scripts and engineered custom hardware solutions. Previously taught coding bootcamps at idTech and worked as a Software Engineering Intern at GR Manpower.</p>
-                            <br>
-                            <p>My interests focus on neural networks, physics simulations, and creating AI systems that can learn and adapt. I'm currently exploring systems programming languages like Rust and Zig while continuing to work on machine learning projects.</p>
+                            <p>Computer Science student at Columbia College with experience in artificial intelligence, machine learning, and systems programming. </p>
+        
                         </div>
                     </div>
 
@@ -202,7 +249,7 @@
                         <div class="project-header">
                             <h3 class="project-title">Resume</h3>
                             <div class="project-links">
-                                <a href="#" target="_blank" class="btn btn-primary">Download PDF</a>
+                                <a href="#" target="_blank" class="btn btn-primary">DOWNLOAD PDF</a>
                             </div>
                         </div>
                         <div class="project-description">
@@ -222,26 +269,26 @@
                             <span class="contact-icon">[L]</span>
                             <div class="contact-title">LinkedIn</div>
                             <div class="contact-description">Let's connect professionally and discuss opportunities</div>
-                            <a href="#" target="_blank" class="btn">Connect</a>
+                            <a href="#" target="_blank" class="btn">CONNECT</a>
                         </div>
                         
                         <div class="contact-card">
                             <span class="contact-icon">{}</span>
                             <div class="contact-title">GitHub</div>
                             <div class="contact-description">Check out my code and contribute to open source projects</div>
-                            <a href="#" target="_blank" class="btn">Follow</a>
+                            <a href="#" target="_blank" class="btn">LINK</a>
                         </div>
                         
                         <div class="contact-card">
                             <span class="contact-icon">@</span>
                             <div class="contact-title">Email</div>
                             <div class="contact-description">Send me a message for collaborations or opportunities</div>
-                            <a href="mailto:abhishekshaarma2@gmail.com" class="btn">Email Me</a>
+                            <a href="mailto:abhishekshaarma2@gmail.com" class="btn">EMAIL ME</a>
                         </div>
                     </div>
 
                     <div class="contact-form">
-                        <h3 style="text-align: center; margin-bottom: 30px; color: #f0f6fc;">Send a Message</h3>
+                        <h3 style="text-align: center; margin-bottom: 30px; color: var(--text-primary); transition: color 0.3s ease;">Send a Message</h3>
                         <form id="contactForm">
                             <div class="form-group">
                                 <label for="contactName">Name</label>
@@ -260,7 +307,7 @@
                                 <textarea id="contactMessage" name="message" required></textarea>
                             </div>
                             <div class="form-submit">
-                                <button type="submit" class="btn btn-primary">Send Message</button>
+                                <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
                             </div>
                         </form>
                         <div id="contactFormMessage" style="text-align: center; margin-top: 20px; display: none;"></div>
@@ -269,25 +316,7 @@
             </div>
         </main>
 
-        <!-- Blog Modal -->
-        <div id="blogModal" class="blog-modal">
-            <div class="blog-modal-content">
-                <button class="blog-close" onclick="closeBlogPost()">×</button>
-                <div id="blogContent" class="blog-content">
-                    <!-- Blog content will be inserted here -->
-                </div>
-            </div>
-        </div>
-
-        <!-- Preview Modal -->
-        <div id="previewModal" class="preview-modal">
-            <div class="preview-content">
-                <button class="blog-close" onclick="closePreview()">×</button>
-                <div id="previewContent" class="blog-content">
-                    <!-- Preview content will be inserted here -->
-                </div>
-            </div>
-        </div>
+        <button class="back-to-top" onclick="scrollToTop()">↑</button>
     </div>
 
     <script src="script.js"></script>
